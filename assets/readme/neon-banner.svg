@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="neonTitle neonDesc">
+  <title id="neonTitle">NEON — The Next Interface</title>
+  <desc id="neonDesc">An animated neon orbital interface banner for NEON, a speculative spatial AI product.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050507"/>
+      <stop offset="0.48" stop-color="#090712"/>
+      <stop offset="1" stop-color="#050507"/>
+    </linearGradient>
+
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4f3ee"/>
+      <stop offset="0.35" stop-color="#8ff9ff"/>
+      <stop offset="0.62" stop-color="#ffffff"/>
+      <stop offset="0.82" stop-color="#ff2fb9"/>
+      <stop offset="1" stop-color="#f4f3ee"/>
+      <animate attributeName="x1" values="-1;0.2;-1" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;1.2;0" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <radialGradient id="orb" cx="38%" cy="32%" r="70%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.12" stop-color="#8ff9ff"/>
+      <stop offset="0.3" stop-color="#3d5bff"/>
+      <stop offset="0.56" stop-color="#a25cff"/>
+      <stop offset="0.8" stop-color="#ff2fb9"/>
+      <stop offset="1" stop-color="#050507"/>
+    </radialGradient>
+
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22f0ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#f4f3ee" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#ff2fb9" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="wordGlow" x="-40%" y="-80%" width="180%" height="300%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.12"/>
+      </feComponentTransfer>
+    </filter>
+
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+
+    <clipPath id="wordClip">
+      <text x="600" y="298" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-size="210" font-weight="900" textLength="650" lengthAdjust="spacingAndGlyphs">NEON</text>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <rect width="1200" height="420" fill="url(#grid)"/>
+  <rect width="1200" height="420" filter="url(#grain)" opacity="0.75"/>
+  <ellipse cx="600" cy="160" rx="470" ry="210" fill="#3d5bff" opacity="0.08" filter="url(#softGlow)"/>
+
+  <g fill="none" stroke="#f4f3ee" stroke-opacity="0.34">
+    <ellipse cx="600" cy="145" rx="300" ry="78" stroke-width="1.1" transform="rotate(-12 600 145)">
+      <animateTransform attributeName="transform" type="rotate" values="-12 600 145;348 600 145" dur="24s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="600" cy="145" rx="218" ry="142" stroke-width="1" stroke="#22f0ff" stroke-opacity="0.45" transform="rotate(22 600 145)">
+      <animateTransform attributeName="transform" type="rotate" values="22 600 145;382 600 145" dur="18s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="600" cy="145" rx="150" ry="44" stroke-width="1.2" stroke="#ff2fb9" stroke-opacity="0.55" transform="rotate(-28 600 145)">
+      <animateTransform attributeName="transform" type="rotate" values="-28 600 145;332 600 145" dur="12s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <g>
+    <circle cx="600" cy="145" r="73" fill="url(#orb)" filter="url(#softGlow)">
+      <animate attributeName="r" values="71;76;71" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="145" r="99" fill="none" stroke="#7ff7ff" stroke-opacity="0.34" stroke-dasharray="2 8">
+      <animateTransform attributeName="transform" type="rotate" values="0 600 145;360 600 145" dur="30s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="145" r="128" fill="none" stroke="#f4f3ee" stroke-opacity="0.1" stroke-width="1"/>
+  </g>
+
+  <g>
+    <circle cx="842" cy="98" r="3" fill="#c8ff2e">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="378" cy="208" r="2" fill="#22f0ff">
+      <animate attributeName="opacity" values="1;0.15;1" dur="1.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="866" cy="202" r="2" fill="#ff2fb9">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="338" y1="102" x2="430" y2="102" stroke="#22f0ff" stroke-opacity="0.35"/>
+    <line x1="780" y1="80" x2="862" y2="80" stroke="#ff2fb9" stroke-opacity="0.35"/>
+    <line x1="850" y1="188" x2="906" y2="188" stroke="#c8ff2e" stroke-opacity="0.28"/>
+  </g>
+
+  <text x="42" y="44" fill="#f4f3ee" fill-opacity="0.6" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="4">NEON® / SPATIAL AI</text>
+  <text x="1158" y="44" text-anchor="end" fill="#f4f3ee" fill-opacity="0.6" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="4">A SENSORY COMPUTER / 2026</text>
+
+  <g filter="url(#wordGlow)">
+    <text x="600" y="298" text-anchor="middle" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-size="210" font-weight="900" textLength="650" lengthAdjust="spacingAndGlyphs" fill="url(#word)">NEON</text>
+  </g>
+
+  <g clip-path="url(#wordClip)" opacity="0.7">
+    <rect x="0" y="100" width="1200" height="3" fill="#ffffff" opacity="0.8">
+      <animate attributeName="y" values="100;310;100" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0" dur="5.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <line x1="42" y1="325" x2="1158" y2="325" stroke="url(#line)" stroke-opacity="0.42"/>
+  <text x="600" y="354" text-anchor="middle" fill="#f4f3ee" fill-opacity="0.78" font-family="Arial,Helvetica,sans-serif" font-size="14" letter-spacing="6">THE NEXT INTERFACE</text>
+  <text x="600" y="382" text-anchor="middle" fill="#22f0ff" fill-opacity="0.72" font-family="Arial,Helvetica,sans-serif" font-size="10" letter-spacing="4">TECHNOLOGY SHOULD FEEL ALIVE.</text>
+
+  <text x="42" y="402" fill="#f4f3ee" fill-opacity="0.32" font-family="Arial,Helvetica,sans-serif" font-size="9" letter-spacing="3">REACT / THREE.JS / GSAP / LENIS</text>
+  <text x="1158" y="402" text-anchor="end" fill="#f4f3ee" fill-opacity="0.32" font-family="Arial,Helvetica,sans-serif" font-size="9" letter-spacing="3">01 — 07 / A FICTIONAL PRODUCT</text>
+
+  <g stroke="#f4f3ee" stroke-opacity="0.24" fill="none">
+    <path d="M18 18h20M18 18v20"/>
+    <path d="M1182 18h-20M1182 18v20"/>
+    <path d="M18 402h20M18 402v-20"/>
+    <path d="M1182 402h-20M1182 402v-20"/>
+  </g>
+</svg>
